@@ -1,0 +1,55 @@
+{
+  "products": [
+    {
+      "brand": "고래미",
+      "items": [
+        {
+          "name": "고래미 타코와사비",
+          "map_price": 18000,
+          "search_keyword": "고래미 타코와사비"
+        },
+        {
+          "name": "고래미 가니미소",
+          "map_price": 25000,
+          "search_keyword": "고래미 가니미소"
+        }
+      ]
+    },
+    {
+      "brand": "설래담",
+      "items": [
+        {
+          "name": "설래담 연포탕",
+          "map_price": 32000,
+          "search_keyword": "설래담 연포탕"
+        }
+      ]
+    }
+  ],
+  "n8n": {
+    "webhook_url": "https://your-n8n-instance.com/webhook/map-monitor"
+  },
+  "crawler": {
+    "delay_range": {
+      "min": 3,
+      "max": 7
+    },
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+  },
+  "notifications": {
+    "slack": {
+      "webhook_url": "https://hooks.slack.com/services/YOUR/SLACK/WEBHOOK",
+      "channel": "#map-violations"
+    },
+    "sms": {
+      "api_key": "YOUR_SMS_API_KEY",
+      "sender": "고래미"
+    }
+  },
+  "database": {
+    "google_sheets": {
+      "spreadsheet_id": "YOUR_SPREADSHEET_ID",
+      "credentials_path": "credentials.json"
+    }
+  }
+}
